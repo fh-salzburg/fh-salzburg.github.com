@@ -1,0 +1,1846 @@
+/* @override http://www.fh-salzburg.ac.at/fileadmin/template/c/style.css?version=1.0 */
+
+/*  
+Theme Name: wachenfeld + golla
+Theme URI: http://wachenfeld-golla.de/
+Description: stylesheet der fh salzburg website
+Version: 1.0
+Author: matthias edler-golla
+Author URI: http://wachenfeld-golla.de/
+c 2009_12_11, wachenfeld-golla.de
+
+umrechnung: 1px = 0.07705314em
+(15.95em/207px = x/1px)1
+*/
+
+/* @group normalisieren */
+
+/* normalisieren */
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+fieldset,img {
+	border: 0;
+}
+
+address,caption,cite,code,dfn,th,var {
+	font-style: normal;
+	font-weight: normal;
+}
+
+ol,ul {
+	list-style: none;
+}
+
+caption,th {
+	text-align: left;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-size: 100%;
+}
+
+q:before {
+	content: "\201E";
+	color: #333;
+}
+
+q:after {
+	content: "\201C";
+	color: #333;
+}
+
+abbr,acronym {
+	border: 0;
+}
+
+/* @end */
+
+/* @group font und farben allgemein */
+
+/* fonts und allgemeine farben */
+
+body {
+	font: 81%/1.4 "Lucida Grande","Lucida Sans Unicode",Verdana,Arial,Sans-Serif;
+	background-color: #FFF;
+	color: #000;
+	background: url(../p/naviObenHG.gif) repeat-x 0 0;
+}
+
+html>body {
+	font-size: 13px;
+}
+
+/* @end */
+
+/* @group links allgemein */
+
+a:link, a:visited {
+	color: #000;
+	text-decoration: none;
+	border: none;
+}
+
+a:visited {
+	color: #535354;
+}
+
+a:hover, a:active, a:focus {
+	text-decoration: underline;
+}
+
+/* @end */
+
+/* @group barrierefreiheit */
+
+hr {
+	display: none;
+}
+
+.unsichtbar {
+	position: absolute;
+	width: 1px;
+	top: -1000px;
+	left: -1000px;
+}
+
+/* @end */
+
+/* @group skipper*/
+
+div#skipper1 a:link, div#skipper1 a:visited, div#skipper2 a:link, div#skipper2 a:visited {
+	font-size: 11px;
+	color: #fff;
+	background-color: #851800;
+	position: absolute;
+	top: 0;
+	left: -10000px;
+	padding: 5px;
+}
+
+/* wird nur durch "tabbing" sichtbar */
+
+div#skipper1 a:focus, div#skipper2 a:focus {
+	position: absolute;
+	top: 30px;
+	left: 20px;
+	z-index: 1000;
+}
+
+/* @end */
+
+/* breite und zentrieren */
+
+div#wrap {
+	width: 76em;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+
+/* @group ContentBlock */
+
+/* spez. bei ie6.css */
+
+div#ContentBlock {
+	margin: 0 0 0 11em;
+	width: 65em;
+	position: relative;
+	top: 0;
+}
+
+div.oberhalbMenue {
+	padding: 26px 0 24px 0;
+}
+
+body.javaScriptAktiv div#ContentBlock {
+	margin-bottom: -35px;
+	top: -35px;
+}
+
+div#ContentBlock p {
+	line-height: 18px;
+	width: 32.0em;
+	margin-bottom: 18px;
+}
+
+/*STEFAN EINGEFUEGT 16.01.08 KORREKTUR */
+
+div#ContentBlock td p {
+	width: auto;
+	margin-bottom: 0px;
+}
+
+div#ContentBlock h3 {
+	line-height: 18px;
+}
+
+/* spez. bei ie6 */
+
+div#ContentBlock blockquote {
+	width: 16em;
+	float: right;
+	margin: 0 16.3em 0 0;
+}
+
+div#ContentBlock blockquote p {
+	font-family: "Trebuchet MS",Verdana,Sans-Serif;
+	font-style: italic;
+	font-weight: normal;
+	width: 100%;
+}
+
+/* @group typo3 elemente */
+
+div#ContentBlock div.csc-textpic-text {
+	padding: 0 !important;
+	margin-bottom: 18px;
+}
+
+div#ContentBlock div.csc-textpic.csc-textpic-left.csc-textpic-above {
+	margin: 0;
+}
+
+div#ContentBlock div.csc-textpic-text * {
+	
+
+}
+
+/* spez. bei ie6.css 
+
+*/
+
+div#ContentBlock div.csc-textpic-imagewrap {
+	width: 207px;
+	float: right;
+	clear: right;
+	margin: 0px 0 0 0 !important;
+	height: 125px;
+}
+
+div#ContentBlock div.csc-textpic-imagewrap div.csc-textpic-caption {
+	margin-top: 6px;
+	font-size: 90%;
+	line-height: 1.4;
+}
+
+/* @end */
+
+/* @group marginalLinks */
+
+/* spez. bei ie6.css */
+
+div#ContentBlock ul#marginalLinks {
+	float: right;
+	margin: 14px 0 18px 0;
+	width: 15.9em;
+	padding: 0 !important;
+}
+
+div#ContentBlock ul#marginalLinks li {
+	list-style-type: none;
+	margin: 0 !important;
+}
+
+div#ContentBlock ul#marginalLinks a {
+
+
+/*  links, die typo3 zwischen <ul> und <li> legt... */
+	display: none;
+}
+
+div#ContentBlock ul#marginalLinks li a {
+	display: block;
+	border: none !important;
+	font-size: 11px;
+	padding: 3px 0 3px 20px;
+}
+
+/* @end */
+
+/* @group tabellen */
+
+div#ContentBlock table {
+	
+
+/*width: 54.0em;*/
+	margin-bottom: 36px;
+}
+
+div#ContentBlock table caption {
+	font-weight: bold;
+	margin: 9px 0 2px 0;
+	line-height: 18px;
+}
+
+div#ContentBlock table.contenttable thead, div#ContentBlock table.contenttable tfoot 
+{
+	font-weight: bold;
+	background-color: #efefef;
+	white-space: nowrap;
+}
+
+div#ContentBlock table.contenttable thead td, div#ContentBlock table.contenttable tfoot td{
+	border: 1px solid #fff;
+}
+
+div#ContentBlock table.contenttable td{
+	vertical-align: top;
+	line-height: 18px;
+	padding: 6px 30px 6px 2px;
+	border-bottom: 1px solid #ccc;
+}
+
+div#ContentBlock table.contenttable tbody tr:hover {
+	background-color: #f4f4f4;
+}
+
+/* via jQuery gesetzt */
+div#ContentBlock table.contenttable td.Col1 {
+/*width: 32.5em;*/
+	padding-right: 0;
+}
+
+/* via jQuery gesetzt */
+/*div#ContentBlock table.contenttable td.ColBetont {
+/*	background-color: #f9f9f9;
+/*}
+
+/* wird zusaetzlich fuer ie6 via jQuery gesetzt */
+
+div#ContentBlock table.contenttable td[colspan] {
+	background-color: #f9f9f9;
+	color: #000000;
+	padding:1px;
+}
+
+div#ContentBlock table.contenttable td[title] {
+	cursor: pointer;
+}
+
+/* @end */
+
+/* @group formular-tabelle */
+
+div#ContentBlock div.anmerkung {
+	width: 15.7em;
+	position: absolute;
+	right: 0;
+	top: 45px;
+}
+
+div#ContentBlock div.anmerkung p {
+	width: 100%;
+	font-size: 85%;
+}
+
+div#ContentBlock table.formular {
+	width: 43.5em;
+	margin: 36px 0 18px 0;
+}
+
+div#ContentBlock table.formular td {
+	padding: 18px 0;
+	vertical-align: top;
+}
+
+div#ContentBlock table.formular tr:hover {
+	background-color: transparent;
+}
+
+div#ContentBlock table.formular tr.adresse td {
+	border: none;
+	padding: 9px 0;
+}
+
+div#ContentBlock table.formular td.intro {
+	width: 15.0em !important;
+	font-weight: bold;
+	padding-right: 1em;
+}
+
+div#ContentBlock table.formular td.wert {
+	width: 26.0em;
+}
+
+/* spez. bei ie7.css u ie6.css */
+
+div#ContentBlock table.formular input {
+	margin: 0 10px 10px 0;
+	font-size: 100%;
+	float: left;
+	clear: left;
+}
+
+div#ContentBlock table.formular input, div#ContentBlock table.formular textarea {
+	border: 1px solid #ccc;
+}
+
+div#ContentBlock table.formular textarea {
+	font-size: 100%;
+	width: 21.0em;
+	padding: 3px;
+	font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,Arial,Sans-Serif;
+}
+
+div#ContentBlock table.formular input.mandatory {
+	background-color: #FBE4DE;
+;
+}
+
+div#ContentBlock table.formular label {
+	float: left;
+}
+
+div#ContentBlock table.formular input[type="text"] {
+	padding: 1px 2px;
+	color: #727073;
+	width: 21.0em;
+}
+
+div#ContentBlock table.formular input[type="checkbox"] {
+	margin-top: 3px;
+}
+
+div#ContentBlock table.formular input[type="text"]:focus {
+	color: #000;
+	border: 1px solid #000;
+}
+
+div#ContentBlock table.formular h4 {
+	clear: left;
+	padding: 0 0 0.5em 0;
+}
+
+div#ContentBlock table.formular td[colspan] {
+	background-color: transparent;
+	color: #000;
+	font-weight: bold;
+	border-top: 1px solid #ccc !important;
+}
+
+/* adressblock zuerst unsichtbar, dann mit jQuery sichtbar */
+
+div#ContentBlock table#Strassenadresse {
+	margin-top: -18px;
+}
+
+div#ContentBlock table#Strassenadresse tr.adresse td.intro {
+	width: 16.5em !important;
+}
+
+div#ContentBlock div.absenden {
+	margin-left: 16.5em;
+	width: 21em;
+}
+
+div#ContentBlock div.absenden input {
+	margin: 0 10px 0 0;
+}
+
+div#ContentBlock div.absenden button {
+	display: block;
+	margin-top: 1em;
+}
+
+/* @end */
+
+h2#ContentTitel {
+	color: #851800;
+}
+
+h1.csc-firstHeader {
+	width: 32.0em;
+	line-height: 1.4;
+	padding: 1.4em 0;
+}
+
+/* @group links im ContentBlock */
+
+/* links in normalem Fliesstext */
+
+div#ContentBlock a {
+	font-weight: normal;
+	display: inline !important;
+}
+
+div#ContentBlock a:link {
+	color: #000;
+	border-bottom: 1px solid #cfcfcf;
+}
+
+div#ContentBlock a:visited {
+	color: #5f5f60;
+	border-bottom: 1px solid #cfcfcf;
+}
+
+div#ContentBlock a:hover, div#ContentBlock a:active, div#ContentBlock a:focus {
+	border-bottom: 1px solid #851800;
+	text-decoration: none;
+	color: #851800;
+}
+
+/* @end */
+
+/* @group spezielle links */
+
+/* spez. bei ie7.css u ie6.css */
+
+li.rss {
+	position: relative;
+	top: -41px;
+}
+
+li.rss a.linkright {
+	padding-left: 19px;
+	background: url(../p/icons/rssFeed.gif) no-repeat 0 0 !important;
+}
+
+/* spezielle links, fuer ie6 wird das aussehen via jquery erzeugt */
+
+div#ContentBlock a[href*="//"], 
+ul#marginalLinks a[href*="//"] {
+	padding-left: 19px;
+	background: url(link_extern.gif) no-repeat 0 0;
+}
+
+/* ie7 vertut sich sonst */
+div#ContentBlock ul#shortCutNavi a[href*="//"], div#ContentBlock h3 a[href*="//"] {
+	padding-left: 0;
+	background: none;
+}
+ul#marginalLinks a[href*=".html"],
+ul#marginalLinks a[href*=".php"],
+ul#marginalLinks a[href*="fh-salzburg.ac.at"],
+ul#marginalLinks a[href*="fh-salzburg.at"] {
+	padding-left: 19px;
+	background: url(../p/icons/link_intern.gif) no-repeat 0 1px;
+}
+
+a[href^="mailto:"],a.mail {
+	padding-left: 19px;
+	background: url(../p/icons/link_eMail.gif) no-repeat 0 1px;
+}
+
+a[href$=".pdf"] {
+	padding-left: 19px;
+	background: url(../p/icons/doku_pdf.gif) no-repeat 0 1px;
+}
+
+
+div#trailers a[href$=".pdf"] {
+	padding-left: 0;
+	background: none;
+}
+
+a[href$=".doc"] {
+	padding-left: 19px;
+	background: url(../p/icons/doku_word.gif) no-repeat 0 1px;
+}
+
+a[href$=".xls"] {
+	padding-left: 19px;
+	background: url(../p/icons/doku_excel.gif) no-repeat 0 1px;
+}
+
+a[href$=".zip"] {
+	padding-left: 19px;
+	background: url(../p/icons/doku_zipped.gif) no-repeat 0 1px;
+}
+
+
+/* @end */
+
+/* @group listen im ContentBlock */
+
+div#ContentBlock ul, div#ContentBlock ol {
+	margin-bottom: 18px;
+	width: 32em;
+}
+
+div#ContentBlock ul li, div#ContentBlock ol li {
+	border: none;
+	line-height: 18px;
+}
+
+div#ContentBlock ol li {
+	list-style-type: decimal;
+	margin-left: 1.7em;
+}
+
+div#ContentBlock ul li {
+	border: none;
+	line-height: 18px;
+	list-style-type: square;
+	margin-left: 1.3em !important;
+}
+
+div#ContentBlock dl {
+	line-height: 18px;
+	margin: 36px 0 45px 0;
+}
+
+div#ContentBlock dt {
+	font-weight: bold;
+	width: 10.8em;
+	float: left;
+}
+
+
+div#ContentBlock div.tx-irfaq-pi1 dt{
+	font-weight: bold;
+	width: auto;
+	float: none;
+}
+div#ContentBlock p.fehlerCode {
+	margin-top: 18px;
+	color: #ccc;
+	font-style: italic;
+}
+
+/* @end */
+
+
+/* @end */
+
+/* @group posts */
+
+div.post {
+	position: relative;
+	width: 100%;
+	line-height: 18px;
+	padding-top: 26px;
+	margin-bottom: 8px;
+	border-top: 1px solid #ccc;
+	overflow: hidden;
+}
+
+/* @group topNews in Liste */
+
+div.post.topNewsList {
+	border-top: 2px solid #851800;
+}
+
+div.post.topNewsList strong {
+	font-weight: bold !important;
+	color: #851800;
+}
+
+div.csc-frame-rulerAfter {
+	border-top: 1px solid #851800;
+}
+/* @end */
+
+div.post img {
+	position: absolute;
+	top: 2.3em;
+	left: 49.2em;
+}
+
+div.post p {
+	margin-left: 16.3em;
+
+	position: relative;
+	width: 100%;
+	margin-bottom: 18px;
+}
+
+div.post ul {
+	margin-left: 15.0em;
+}
+
+div.post h3 {
+	margin-left: 16.3em;
+	width: 26.8em;
+}
+
+div.post h3 a:link, div.post h3 a:visited {
+	font-weight: bold !important;
+	border: none !important;
+}
+
+div.post a {
+	display: inline !important;
+	font-weight: normal !important;
+}
+
+div.post a:hover img {
+	opacity: 0.9;
+}
+
+div.post p.mehrLink {
+	font-size: 100%;
+	width: 18.5em !important;
+	float: left;
+	margin: 0;
+}
+
+div.post p.details {
+	font-weight: normal;
+	position: absolute;
+	width: 16.0em !important;
+	left: -16.3em;
+}
+
+div.post p.details strong {
+	font-weight: normal;
+	font-size: 85%;
+}
+
+div.post p.details a:link, div.post p.details a:visited {
+	border: none !important;
+}
+
+div.post p.mehrLink a {
+	background: url(../p/icons/moreArrow.gif) no-repeat 0 50% !important;
+	padding-left: 12px !important;
+	font-size: 85%;
+	border: none !important;
+}
+
+div.post span.zurueck a {
+	background: url(../p/icons/backArrow.gif) no-repeat 0 50%;
+	padding-left: 12px;
+	font-size: 85%;
+	border: none !important;
+}
+
+div.post a.mehrLink:hover, div.post a.mehrLink:active, div.post a.mehrLink:focus {
+	text-decoration: underline !important;
+}
+
+/* @group weitere seiten links */
+
+div.tx-ttnews-browsebox {
+	margin-left: 16.5em;
+}
+
+div.tx-ttnews-browsebox p {
+	font-size: 85%;
+	margin: 0 !important;
+}
+
+div.tx-ttnews-browsebox table {
+	width: 16em !important;
+	font-size: 85%;
+}
+
+div.tx-ttnews-browsebox table tbody tr:hover {
+	background-color: transparent !important;
+}
+
+div.tx-ttnews-browsebox table td {
+	border: none !important;
+}
+
+div.tx-ttnews-browsebox table p {
+	width: auto !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group topNews */
+
+/* spez. bei ie6.css */
+
+body.startseite div#ContentBlock, body.startseite.javaScriptAktiv div#ContentBlock {
+	margin: 0 0 -35px 10.5em !important;
+	padding: 1em 0 0 0;
+	width: 71em;
+}
+
+/* spez. bei ie6.css */
+
+body.startseite div#ContentBlock h2 {
+	margin: 0 0 0.5em 0.5em;
+	color: #851800;
+}
+
+div.topNews {
+	width: 20.3em;
+	float: left;
+	margin-left: 0.5em;
+	padding-right: 1em;
+}
+
+div.topNews h3, body.startseite div#ContentBlock div.topNews p {
+	width: 100%;
+	font-size: 85%;
+}
+
+div.topNews h3 a {
+	white-space: nowrap;
+}
+
+body.startseite div#ContentBlock div.topNews h3 a:link, body.startseite div#ContentBlock div.topNews h3 a:visited {
+	font-weight: bold;
+	border: none;
+}
+
+body.startseite div#ContentBlock div.topNews span a {
+	display: none;
+	font-size: 85%;
+}
+
+body.startseite div#ContentBlock div.topNews p a:link, body.startseite div#ContentBlock div.topNews p a:visited {
+	border: none;
+}
+
+body.startseite div#ContentBlock div.topNews p a:hover, body.startseite div#ContentBlock div.topNews p a:active, body.startseite div#ContentBlock div.topNews p a:focus {
+	text-decoration: underline;
+}
+
+/* @end */
+
+/* @group logo & titel */
+
+img#logo {
+	float: left;
+	margin: 39px 21px 0 0;
+}
+
+img#logo:hover {
+	opacity: 0.8;
+}
+
+h1#fh {
+	text-indent: -10000px;
+	margin: 39px 0 0 11em;
+	width: 346px;
+	height: 85px;
+	background: url(fh_salzburg_schriftzug.png) no-repeat 0 0;
+}
+
+h1#fh span {
+	display: block;
+}
+
+/* @end */
+
+/* @group trailerBilder */
+
+div#trailers {
+	clear: left;
+	margin: 12px 0 0 11em;
+	width: 67.0em;
+	height: 14.56em;
+	overflow: hidden;
+}
+
+div#trailers img {
+	font-size: 100%;
+	float: left;
+	margin-right: 0.5em;
+}
+
+/* spez. bei ie6 + ie7 */
+
+/* Habe diese Angaben geändert, damit Klick-Blider überall zu erkennen sind, 
+nicht nur in den Trailers :) Stefan,13.3.08 */
+div#trailers a, div.csc-textpic-image a {
+	display: block;
+	width: 207px;
+	height: 155px;
+	position: relative;
+	margin-right:5px;
+}
+
+div#trailers a span, div.csc-textpic-image a span {
+	display: block;
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	bottom: 8px;
+	right: 8px;
+	text-indent: -10000px;
+	background: url(../p/icons/abspielenKlein.png) no-repeat 0 0;
+}
+
+/* spez. bei ie6 + ie7 */
+div#trailers a:link span, div#trailers a:visited span,
+div.csc-textpic-image a:link span, div.csc-textpic-image a:visited span {
+	opacity: 0.4;
+}
+
+/* spez. bei ie6 + ie7 */
+div#trailers a:hover span, div#trailers a:active span, div#trailers a:focus span,
+div.csc-textpic-image a:hover span, div.csc-textpic-image a:active span, div.csc-textpic-image a:focus span {
+	opacity: 0.7;
+}
+
+/* @end */
+
+/* @group textSpalten */
+
+div.fuenfSpalt {
+	width: 26.8em;
+	float: left;
+	line-height: 18px;
+	margin: 9px 0.5em 10px 0;
+}
+
+div.fuenfSpalt p {
+	margin-bottom: 18px;
+	width: 340px !important;
+}
+
+div.fuenfSpalt blockquote {
+	width: 27em !important;
+	float: none;
+	margin: 0 0 36px 0 !important;
+}
+
+div.fuenfSpalt blockquote p {
+	font-size: 16px !important;
+	line-height: 21px !important;
+	font-weight: bold !important;
+	width: 27em !important;
+}
+
+div.vierSpalt {
+	padding-top: 2px;
+	width: 270px;
+	float: left;
+	font-size: 11px;
+	line-height: 15px;
+	margin: 9px 0 10px 0px;
+}
+
+div.vierSpalt p {
+	margin-bottom: 15px;
+	width: 270px !important;
+}
+
+div.dreiSpalt {
+	padding-top: 2px;
+	width: 200px;
+	float: left;
+	font-size: 11px;
+	line-height: 15px;
+	margin: 9px 0 10px 10px;
+}
+
+div.dreiSpalt p {
+	margin-bottom: 15px;
+	width: 200px !important;
+}
+
+/* @end */
+
+/* @group topArea */
+
+/* zuerst unsichtbar! */
+
+div#topArea {
+	background: #F1F1F1;
+}
+
+div#topArea div#naviTop {
+	width: 76em;
+	margin: 0 auto;
+}
+
+/* @group topMenu */
+
+div#naviTop ul#topMenu {
+	height: 20px;
+	width: 100%;
+	position: relative;
+}
+
+div#naviTop ul#topMenu a {
+	font-size: 85%;
+	width: 100%;
+	display: block;
+}
+
+div#naviTop ul#topMenu li {
+	position: absolute;
+	top: 3px;
+	height: 15px;
+}
+
+/* @group access-icon */
+
+div#naviTop ul#topMenu li#access {
+	width: 10em;
+	left: 0;
+}
+
+div#naviTop ul#topMenu li#access a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+div#naviTop ul#topMenu li#access a:link, div#naviTop ul#topMenu li#access a:visited {
+	background: url(../p/icons/accessIcon.gif) no-repeat 0 0;
+}
+
+div#naviTop ul#topMenu li#access a:hover, div#naviTop ul#topMenu li#access a:active, div#naviTop ul#topMenu li#access a:focus {
+	background: url(../p/icons/accessIcon.gif) no-repeat 0 -15px;
+	text-decoration: none;
+}
+
+div#naviTop ul#topMenu li#access a span {
+	padding-left: 17px;
+}
+
+div#naviTop ul#topMenu li#access a:link span, div#naviTop ul#topMenu li#access a:visited span {
+	display: none;
+}
+
+div#naviTop ul#topMenu li#access a:hover span, div#naviTop ul#topMenu li#access a:active span, div#naviTop ul#topMenu li#access a:focus span {
+	display: inline;
+}
+
+/* @end */
+
+/* @group printIcon */
+
+div#naviTop ul#topMenu li#druckversion {
+	width: 10em;
+	left: 11em;
+}
+
+div#naviTop ul#topMenu li#druckversion a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+div#naviTop ul#topMenu li#druckversion a:link, div#naviTop ul#topMenu li#druckversion a:visited {
+	background: url(../p/icons/printIcon.gif) no-repeat 0 0;
+}
+
+div#naviTop ul#topMenu li#druckversion a:hover, div#naviTop ul#topMenu li#druckversion a:active, div#naviTop ul#topMenu li#druckversion a:focus {
+	background: url(../p/icons/printIcon.gif) no-repeat 0 -15px;
+	text-decoration: none;
+}
+
+div#naviTop ul#topMenu li#druckversion a span {
+	padding-left: 17px;
+}
+
+div#naviTop ul#topMenu li#druckversion a:link span, div#naviTop ul#topMenu li#druckversion a:visited span {
+	display: none;
+}
+
+div#naviTop ul#topMenu li#druckversion a:hover span, div#naviTop ul#topMenu li#druckversion a:active span, div#naviTop ul#topMenu li#druckversion a:focus span {
+	display: inline;
+}
+
+/* @end */
+
+div#naviTop ul#topMenu li#suchen {
+	width: 10em;
+	left: 24.3em;
+}
+
+div#naviTop ul#topMenu li#suchen a {
+	background: url(../p/icons/arrowTop.gif) no-repeat 0% 50%;
+	padding-left: 12px;
+}
+
+div#naviTop ul#topMenu li#intra {
+	width: 10em;
+	left: 37.8em;
+}
+
+div#naviTop ul#topMenu li#intra a,
+div#naviTop ul#topMenu li#fhsys a {
+	background: url(link_extern.gif) no-repeat 0 50%;
+	padding-left: 20px;
+}
+
+div#naviTop ul#topMenu li#fhsys {
+	width: 6em;
+	left: 50.7em;
+} 
+
+div#naviTop ul#topMenu li#sidemap {
+	width: 10em;
+	left: 60.3em;
+}
+
+div#naviTop ul#topMenu li#sprachen {
+	width: 5em;
+	right: 1em;
+	text-align: right;
+}
+
+div#naviTop ul#topMenu li#sprachen a {
+	background: url(../p/icons/moreArrow.gif) no-repeat 100% 50%;
+	padding-right: 12px;
+}
+
+/* @end */
+
+/* @group suchStuff */
+
+div#topArea div#suchDiv {
+	background-color: #999;
+	padding: 10px 0;
+	line-height: 15px;
+	overflow: hidden;
+}
+
+div#topArea div#suchDiv input#suchfeld {
+	border: 1px solid #851800;
+	padding: 2px;
+	font-size: 100%;
+	margin-right: 10px;
+	width: 14em;
+}
+
+div#topArea div#suchDiv input#suchbutton {
+	border: 1px solid #851800;
+	padding: 2px;
+	font-size: 100%;
+	width: 6em;
+	background-color: #d8d7d8;
+	cursor: pointer;
+}
+
+div#topArea div#suchDiv input#suchbutton:hover {
+	background-color: #ecf2ea;
+}
+
+div#topArea div#suchDiv ul {
+	overflow: hidden;
+	padding: 5px 0 0 0;
+}
+
+div#topArea div#suchDiv li {
+	float: left;
+	margin-right: 2em;
+}
+
+div#topArea div#suchDiv h2 {
+	margin-bottom: 0.7em;
+}
+
+div#topArea div#suchDiv form {
+	margin: 9px 0 9px 27.4em;
+}
+
+div#topArea div#suchDiv form select {
+	border: 1px solid #fff;
+	width: 7.5em;
+	margin-top: 10px;
+}
+
+div#topArea div#suchDiv form label {
+	margin-top: 10px;
+}
+
+/* @end */
+
+/* @group intranetStuff */
+
+div#naviTop div#intranetStuff {
+	background: #851800;
+	color: #fff;
+	padding: 15px 10px 15px 27.4em;
+}
+
+div#naviTop div#intranetStuff h2 {
+	margin-bottom: 0.5em;
+}
+
+div#naviTop div#intranetStuff input {
+	border: 1px solid #851800;
+	padding: 2px;
+	font-size: 100%;
+	margin-right: 10px;
+	width: 8em;
+}
+
+div#naviTop div#intranetStuff input#tx-newloginbox-pi1-login_submit {
+	padding: 2px 8px;
+	cursor: pointer;
+	width: 5em;
+}
+
+div#naviTop div#intranetStuff input#tx-newloginbox-pi1-login_submit:hover {
+	background-color: #ecf2ea;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group hauptNavigation */
+
+/* spez. bei ie6 + ie7 */
+
+ul#hauptnavigation {
+	clear: left;
+	width: 76em;
+	border-top: 1px solid #ccc;
+	position: relative;
+	margin-bottom: 36px;
+}
+
+/* spez. bei ie6.css */
+
+
+/* spez. bei ie6 + ie7 */
+
+ul#hauptnavigation li {
+	border-bottom: 1px solid #ccc;
+	line-height: 35px;
+}
+
+/* 071203, thias 
+wird jetzt via jQuery eingefuegt, wenn text zu lang ist
+*/
+
+/* spez. bei ie6 + ie7 */
+ul#hauptnavigation a.zweiZeilig {
+	line-height: 18px;
+	margin: 8px 0 8px 0;
+	background-position: 100% 5px !important;
+}
+
+/*STEFAN EINGEFueGT 15.01.08 KORREKTUR zweizeilig IN shortCutNavi */
+
+ul#shortCutNavi a.zweiZeilig {
+	line-height: 18px;
+	margin: 0px 0 0px 0;
+	
+
+/*background-position: 100% 13px;*/
+	background: none;
+	padding-top: 9px;
+
+
+/* 080208 thias */
+}
+
+/* spez. bei ie6 + ie7 */
+
+ul#hauptnavigation ul.spalte2 {
+	margin-left: 11em;
+	width: 65em;
+	position: relative;
+	top: -35px;
+	margin-bottom: -36px;
+}
+
+ul#hauptnavigation ul.spalte2 a {
+	padding: 0;
+	font-weight: normal;
+	width: 16em;
+}
+
+/* spez. bei ie6 + ie7 */
+
+ul#hauptnavigation ul.spalte3 {
+	margin-left: 16.3em;
+	width: 48.5em;
+	position: relative;
+	top: -35px;
+	margin-bottom: -36px;
+}
+
+ul#hauptnavigation ul.spalte3 a {
+	font-weight: normal;
+	width: 16em;
+}
+
+/* spez. bei ie6 + ie7 */
+
+ul#hauptnavigation ul.spalte4 {
+	margin-left: 16.5em;
+	width: 32em;
+	position: relative;
+	top: -35px;
+	margin-bottom: -36px;
+}
+
+/* spez. bei ie6 + ie7 */
+
+ul#hauptnavigation ul.spalte5 {
+	margin-top: 8px;
+	margin-left: 16.5em;
+	width: 15.5em;
+	position: relative;
+	top: -43px;
+	margin-bottom: -44px;
+}
+
+/* @end */
+
+/* @group shortCutNavi */
+
+/* navi oberhalb des content, aehnlich wie bread-crump-pfad */
+
+div#ContentBlock ul#shortCutNavi {
+	margin: 8px 0 9px 0;
+	width: 105%;
+	overflow: hidden;
+}
+
+/* spez. bei ie6.css */
+
+div#ContentBlock ul#shortCutNavi li {
+	float: left;
+	width: 15.9em;
+	margin-right: 0.5em;
+	list-style-type: none;
+	margin-left: 0 !important;
+}
+
+div#ContentBlock ul#shortCutNavi li a {
+	display: block !important;
+	width: 100%;
+	font-weight: normal !important;
+}
+
+div#ContentBlock ul#shortCutNavi li a:link, div#ContentBlock ul#shortCutNavi li a:visited {
+	border: none;
+	color: #851800;
+}
+
+div#ContentBlock ul#shortCutNavi a:hover, div#ContentBlock ul#shortCutNavi a:active, div#ContentBlock ul#shortCutNavi a:focus {
+	text-decoration: underline !important;
+}
+
+/* spez. bei ie6 */
+
+div#ContentBlock ul#shortCutNavi li#shortLinks {
+	margin-right: 0;
+}
+
+div#ContentBlock ul#shortCutNavi li#shortLinks a:link, div#ContentBlock ul#shortCutNavi li#shortLinks a:visited {
+	color: #000;
+}
+
+div#ContentBlock ul#shortCutNavi li#shortLinks a.aktiv {
+	color: #851800 !important;
+	text-decoration: underline;
+}
+
+/* @group CloneMenue */
+
+/* wird via jQuery gecloned und hier eingefuegt */
+
+div#ContentBlock ul#shortCutNavi ul.spalte3Clone {
+	margin-left: 16.5em;
+	margin-top: -17px;
+	width: 32.5em;
+}
+
+div#ContentBlock ul#shortCutNavi ul.spalte3Clone li {
+	line-height: 36px;
+	margin-top: -10px;
+}
+
+/* spez. bei ie6 */
+
+div#ContentBlock ul#shortCutNavi ul.spalte4Clone {
+	margin-left: 16.5em;
+	margin-top: -18px;
+
+
+/* war -27px */
+	width: 32.5em;
+	overflow: hidden;
+}
+
+div#ContentBlock ul#shortCutNavi ul.spalte4Clone li {
+	line-height: 18px;
+	width: 100%;
+	margin-top: 0;
+}
+
+div#ContentBlock ul#shortCutNavi ul.spalte4Clone a {
+	color: #000;
+	font-weight: normal;
+	border-top: none !important;
+}
+
+div#ContentBlock ul#shortCutNavi ul.spalte4Clone a.aktiv {
+	color: #851800;
+}
+
+div#ContentBlock ul#shortCutNavi ul.spalte4Clone a.mitSubmenu {
+	border-top: 1px solid #ccc;
+	margin-top: 0px;
+	background-image: none;
+}
+
+/* spez. bei ie6 */
+
+div#ContentBlock ul#shortCutNavi ul.spalte5Clone {
+	margin-left: 210px;
+	margin-top: -18px;
+}
+
+div#ContentBlock ul#shortCutNavi ul.spalte5Clone li {
+	line-height: 18px;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group googleMaps */
+
+div#mapshadow {
+	margin-top: 1.4em;
+	width: 33em;
+	height: 25.5em;
+	/*
+
+background
+
+-image: url(../p/mapShadow.gif);
+
+
+
+	background-repeat: no-repeat;
+
+
+
+	background-position: 0 0;*/
+
+
+
+	float: left;
+}
+
+div#map {
+	width: 32.2em;
+	height: 25em;
+	border: 1px solid #ccc;
+}
+
+div#zusatzinfos {
+	margin-top: 1.4em;
+	width: 26.5em;
+	float: left;
+}
+
+/* @end */
+
+/* @group footer */
+
+div#footer {
+	background: #F1F1F1 url(../p/footerHG.gif) repeat-x 0 0;
+	margin-top: 30px;
+	padding-bottom: 50px;
+	overflow: hidden;
+}
+
+div#footer div#footerInhalt {
+	width: 76em;
+	margin: 10px auto;
+	padding: 0 0 36px 0;
+	overflow: hidden;
+	position: relative;
+}
+
+div#footer ul#footerMenu {
+	float: left;
+	width: 11em;
+	padding-top: 0px;
+}
+
+div#footer ul#footerMenu li, div#footer ul#footerMenu1 li {
+	font-size: 85%;
+}
+
+div#footerInhalt div, div#footer ul#footerMenu1  {
+	margin-top: 0px;
+	float: left;
+	width: 16em;
+	margin-right: 0.5em;
+}
+
+div#footerInhalt div h3, div#footerInhalt div p {
+	font-size: 85%;
+}
+
+div#footerInhalt a#topScroller {
+	display: block;
+	width: 72px;
+	height: 25px;
+	float: right;
+	padding: 1px 0 0 0;
+	margin: 1px -4px 0 0;
+	background: url(../p/icons/topScrollHG.gif) no-repeat 0 0;
+	text-align: center;
+	font-size: 85%;
+}
+
+/* @group socialBookmarks */
+
+div#footerInhalt div#SocialBookmarks {
+	/*outline: 1px solid red;*/
+}
+
+div#footerInhalt div#SocialBookmarks ul {
+	margin-top: 5px;
+	width: 12em;
+}
+
+div#footerInhalt div#SocialBookmarks ul li {
+	float: left;
+	margin: 0 5px 5px 0;
+	width: 16px;
+	height: 16px;
+	position: relative;
+	overflow: hidden;
+}
+
+div#footerInhalt div#SocialBookmarks ul li:hover {
+	-webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 2px;
+}
+
+div#footerInhalt div#SocialBookmarks ul li a,
+div#footerInhalt div#SocialBookmarks ul li span {
+	display: block;
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+div#footerInhalt div#SocialBookmarks ul li a#Delicious span {
+	background-image: url(../p/socialBookmarks/del_trans.gif);
+}
+
+div#footerInhalt div#SocialBookmarks ul li a#Digg span {
+	background-image: url(../p/socialBookmarks/digg_trans.gif);
+}
+
+div#footerInhalt div#SocialBookmarks ul li a#Facebook span {
+	background-image: url(../p/socialBookmarks/facebook.com.png);
+}
+
+div#footerInhalt div#SocialBookmarks ul li a#Googleplus span {
+	background-image: url(../p/socialBookmarks/googleplus.png);
+}
+
+div#footerInhalt div#SocialBookmarks ul li a#Fachhochschulen span {
+	background-image: url(../p/socialBookmarks/fachhochschulen.ac.at.gif);
+}
+
+div#footerInhalt div#SocialBookmarks ul li a#Flickr span {
+	background-image: url(../p/socialBookmarks/flickr.com.gif);
+}
+
+div#footerInhalt div#SocialBookmarks ul li a#Friendfeed span {
+	background-image: url(../p/socialBookmarks/friendfeed.com.gif);
+}
+
+div#footerInhalt div#SocialBookmarks ul li a#GoogleVideo span {
+	background-image: url(../p/socialBookmarks/google.com.gif);
+}
+
+div#footerInhalt div#SocialBookmarks ul li a#Myspace span {
+	background-image: url(../p/socialBookmarks/myspace.com.png);
+}
+
+div#footerInhalt div#SocialBookmarks ul li a#Myvideo span {
+	background-image: url(../p/socialBookmarks/myvideo.at.gif);
+}
+
+div#footerInhalt div#SocialBookmarks ul li a#Slideshare span {
+	background-image: url(../p/socialBookmarks/slideshare.net.png);
+}
+
+div#footerInhalt div#SocialBookmarks ul li a#Twitter span {
+	background-image: url(../p/socialBookmarks/twitter.com.png);
+}
+
+div#footerInhalt div#SocialBookmarks ul li a#Vimeo span {
+	background-image: url(../p/socialBookmarks/vimeo.com.gif);
+}
+
+div#footerInhalt div#SocialBookmarks ul li a#MisterWong span {
+	background-image: url(../p/socialBookmarks/wong_trans.gif);
+}
+
+div#footerInhalt div#SocialBookmarks ul li a#Youtube span {
+	background-image: url(../p/socialBookmarks/youtube.com.png);
+}
+
+/* @end */
+
+div#footerInhalt div#Kuchl {
+	position: absolute;
+	left: 60.2em;
+	top: 0;
+}
+
+
+/* @end */
+
+/* @group sitemap */
+
+body#sitemap ul#hauptnavigation a.mitSubmenu {
+	background-image: none;
+}
+
+/* spez. bei ie7.css u ie6.css */
+body#sitemap ul#hauptnavigation ul.spalte4 {
+	top: -35px;
+	margin-bottom: 0px;
+}
+
+/* spez. bei ie7.css u ie6.css */
+body#sitemap ul#hauptnavigation ul.spalte5 {
+	margin-top: 0px;
+	top: -28px;
+	margin-bottom: -29px;
+}
+
+/* @end */
+
+/* @group suchergebnisse */
+
+/* suchergebnisse */
+
+/* via jQuery gesetzt und hier bekaempft */
+
+/* div#ContentBlock div.tx-indexedsearch table {
+	width: 43.2em;
+	margin: 0 0 1em 0;
+} */
+
+div#ContentBlock #searchform div input {
+	width: 15.3em;
+	margin: 0 0.3em 0.5em 0;
+	border: 1px solid #ccc;
+	font-size: 100%;
+	padding: 3px;
+}
+
+div#ContentBlock #searchform div select {
+	width: 15.7em;
+	border: 1px solid #ccc;
+	background: #efeeef;
+	font-size: 100%;
+}
+
+strong.tx-indexedsearch-redMarkup, span.tx-indexedsearch-sw {
+	background-color: #ccc;
+	color: #fff !important;
+	padding: 0 2px;
+}
+
+div.tx-mgsearch-pi1 div.tx-indexedsearch div.tx-indexedsearch-browsebox p {
+	border-top: 1px solid #ccc;
+	padding-top: 9px;
+	width: 66.5em !important;
+}
+
+td.tx-indexedsearch-info.info.ColBetont {
+	font-size: 80%;
+	line-height: 1.4 !important;
+	padding-left: 0.6em !important;
+}
+
+td.tx-indexedsearch-result-number.result-number.ColBetont {
+	padding: 0 !important;
+}
+
+td.tx-indexedsearch-descr.descr.ColBetont {
+	font-style: normal;
+	padding: 0 5em 0.6em 0.5em !important;
+}
+
+dl.tx-indexedsearch-info.info.info-tmpl-css {
+	background: #f5f5f5;
+	font-size: 80%;
+	margin: 0.5em 0 5em 0 !important;
+	width: 62%;
+}
+
+dl.tx-indexedsearch-info.info.info-tmpl-css dt {
+	font-weight: bold;
+	width: auto !important;
+	float: left;
+}
+
+div.tx-indexedsearch div.tx-indexedsearch-browsebox ul.browsebox {
+	background-color: #f5f5f5;
+	width: 62% !important;
+	padding-bottom: 5px;
+}
+
+div.tx-indexedsearch div.tx-indexedsearch-browsebox ul.browsebox * {
+	padding: 0;
+	margin: 0 !important;
+}
+
+div.tx-indexedsearch div.tx-indexedsearch-res div.tx-indexedsearch-res.res.res-tmpl-css h3 {
+	margin-bottom: 1em;
+}
+
+div.tx-indexedsearch div.tx-indexedsearch-res div.tx-indexedsearch-res.res.res-tmpl-css h3 span.tx-indexedsearch-title.title a {
+	background: url(../p/icons/moreArrow.gif) no-repeat 0 50%;
+	padding-left: 12px;
+}
+
+div.tx-indexedsearch h3 span.tx-indexedsearch-percent.percent.percent-tmpl-css {
+	font-size: 80%;
+	margin-top: 0 !important;
+	margin-right: 31.6em;
+}
+
+div#ContentBlock div.tx-mgsearch-pi1 div.tx-danpldapbrowser-pi1 table {
+	margin: 0;
+}
+
+/* @end */
+
+/* @group news-archiv */
+
+div#ContentBlock div.news-amenu-container ul {
+	margin: 0 0 1em 0 !important;
+}
+
+div#ContentBlock div.news-amenu-container ul li {
+	list-style: none !important;
+	margin: 0 !important;
+	line-height: 1.7;
+}
+
+div#ContentBlock div.news-amenu-container ul li.news-amenu-item-year {
+	margin: 2em 0 0 0 !important;
+	padding: 0;
+	font-weight: bold;
+}
+
+div#ContentBlock div.news-amenu-container ul a:link, div#ContentBlock div.news-amenu-container ul a:visited {
+	border: none;
+	font-weight: normal;
+}
+
+div#ContentBlock div.news-amenu-container ul a:hover, div#ContentBlock div.news-amenu-container ul a:active, div#ContentBlock div.news-amenu-container ul a:focus {
+	text-decoration: underline;
+}
+
+/* @end */
+
+/* @group presse */
+
+body#presse div.tx-dirlisting-pi1 table {
+	border: 1px solid #fff;
+	margin-top: 18px;
+}
+
+body#presse div.tx-dirlisting-pi1 table tbody td {
+	background-color: #fff;
+	line-height: 1.9em;
+}
+body#presse div.tx-dirlisting-pi1 table tbody td.tx-dirlisting-pi1-header-icon,
+body#presse div.tx-dirlisting-pi1 table tbody td.tx-dirlisting-pi1-header-filename, 
+body#presse div.tx-dirlisting-pi1 table tbody td.tx-dirlisting-pi1-header-filesize, 
+body#presse div.tx-dirlisting-pi1 table tbody td.tx-dirlisting-pi1-header-filemod {
+	color: #000;
+	font-style: normal;
+	padding-bottom: 9px;
+	border-bottom: 1px solid #fff;
+}
+
+body#presse ul.csc-menu.csc-menu-def li {
+	list-style: none;
+	padding-left: 0;
+	margin: 0 !important;
+}
+
+body#presse ul.csc-menu.csc-menu-def li a:link, body#presse ul.csc-menu.csc-menu-def li a:visited {
+	text-decoration: none !important;
+	border: none !important;
+}
+
+body#presse ul.csc-menu.csc-menu-def li a:hover, body#presse ul.csc-menu.csc-menu-def li a:active, body#presse ul.csc-menu.csc-menu-def li a:focus {
+	text-decoration: underline !important;
+}
+
+body#presse div.post div.news-single-additional-info {
+	width: 32.0em;
+	margin-left: 16.2em;
+	margin-bottom: 18px;
+}
+
+body#presse div.post div.news-single-additional-info dl.news-single-files {
+	margin: 0 0 18px 0;
+}
+
+body#presse div.post div.news-single-additional-info dl.news-single-files dt {
+	width: auto;
+	margin-right: 1em;
+}
+
+
+
+/* @end */
+
+/* @group tabellen in typo3 festgelegt */
+
+table td p {
+	width: auto;
+}
+
+td.schmal {
+	width: 10.4em;
+}
+
+td.mittel {
+	width: 20.9em;
+}
+
+td.breit {
+	width: 27.2em;
+}
+
+table.schmaleTabelle{
+	width: 26.8em;
+}
+
+table.mittlereTabelle{
+	width: 37.7em;
+}
+
+table.breiteTabelle{
+	width: 48.7em;
+}
+
+/* @end */
+
+/* @group beim frontend-editieren */
+
+div#trailers img.frontEndEditIcons {
+	display: none;
+}
+
+table.typo3-editPanel {
+	width: auto !important;
+}
+
+table.typo3-editPanel td {
+	padding: 3px;
+}
+/* @end */
